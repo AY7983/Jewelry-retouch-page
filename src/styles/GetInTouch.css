@@ -1,0 +1,94 @@
+.container-get {
+  width: 50%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: Playfair Display;
+  font-weight: 700;
+  color: #CA0994;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+p {
+  text-align: center;
+  font-size: 1rem;
+  color: #ffff;
+}
+
+/* Get in Touch Section */
+#get-in-touch {
+  padding: 50px 0;
+  background: url('../../public/images/choose.png')
+}
+
+.get-in-touch .contact-header {
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #CA0994;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #CA0994;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #ffff;
+  color:#CA0994;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .form-group input, .form-group textarea {
+    font-size: 0.9rem;
+  }
+
+  .submit-button {
+    padding: 10px;
+  }
+}

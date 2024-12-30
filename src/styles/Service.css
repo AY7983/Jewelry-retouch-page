@@ -1,0 +1,166 @@
+/* General Styling for the Section */
+.jewelry-services {
+  background-color: #f7f7f7;
+  padding: 60px 20px; /* Added horizontal padding for better spacing */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  color: #CA0994;
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: -0.5px;
+  line-height: 1.2; /* Improved readability */
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  font-family: 'Raleway', sans-serif;
+  color: #333; /* Subtle contrast for better readability */
+  margin-bottom: 40px;
+  text-align: center;
+  max-width: 80%; /* Better width control */
+  line-height: 1.5; /* Enhanced readability */
+}
+
+.description {
+  font-size: 1.1rem;
+  font-family: 'Raleway', sans-serif;
+  color: #555; /* Softer text color for a modern look */
+  margin-bottom: 20px;
+  line-height: 1.8;
+  max-width: 70%;
+  text-align: center; /* Center-align description text */
+}
+
+/* Key Points Styling */
+.key-points {
+  margin-bottom: 50px;
+}
+
+.key-points .list-group-item {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #333;
+  padding: 15px 20px;
+  background-color: #fff; /* Distinct background */
+  border: 1px solid #ddd; /* Subtle border for separation */
+  border-radius: 8px; /* Smooth corners */
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.key-points .list-group-item:hover {
+  border-color: #CA0994; /* Highlight border on hover */
+  background-color: rgba(202, 9, 148, 0.1); /* Subtle hover effect */
+}
+
+.key-points .icon {
+  font-size: 1rem;
+  color: #fff;
+  background-color: #CA0994;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.key-points .content {
+  flex: 1; /* Ensure text takes up remaining space */
+}
+
+/* Service Items Grid */
+.service-item {
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Modern shadow effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.service-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.service-title:hover {
+  background-color: #CA0994;
+  color: #fff;
+  cursor: pointer;
+}
+
+.service-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #CA0994;
+  margin: 10px auto 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    max-width: 90%; /* Expand width for smaller screens */
+  }
+
+  .key-points .list-group-item {
+    padding: 15px;
+    font-size: 0.95rem;
+  }
+
+  .service-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .key-points .list-group-item {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+
+  .service-title {
+    font-size: 1rem;
+  }
+}

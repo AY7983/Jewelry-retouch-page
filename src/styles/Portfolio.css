@@ -1,0 +1,296 @@
+/* Portfolio Section */
+.portfolio-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+.pipe{
+  font-size: 35px;
+  margin-left:30px;
+  font-weight: bold;
+}
+.portfolio-item {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 20px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.portfolio-item.active {
+  background-color: #333;
+  color: #fff;
+}
+
+.portfolio-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.image-gallery {
+  display: none;
+}
+
+.image-gallery.active {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.image-gallery img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+
+.portfoliocss{
+  color:#CA0994;
+  font-family: Playfair Display;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 20px;
+  margin-top: 25px;
+  font-weight: bold;
+  font-size: 3.5rem !important;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);  
+}
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  margin: 20px;
+  font-family: Playfair Display;
+}
+
+.portfolio-item {
+  display: block;
+  width: 25%;
+  height: 50%;
+  overflow: hidden;
+  border: 1px solid #CA0994;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+/* Category.css */
+.category-container {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.category-item {
+  padding: 10px 20px;
+  border: 2px solid #CA0994; /* Default border color */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  font-size: 16px;
+}
+
+.category-item:hover {
+  background-color: #CA0994; /* Background color on hover */
+  color: #fff; /* Text color on hover */
+  border-color: #fff; /* Change border color on hover */
+}
+
+
+.hidden {
+  display: none;
+}
+
+.filter-buttons {
+  margin: 10px;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 3rem;
+  font-family:Playfair Display;
+}
+
+.filter-buttons .active{
+  color:#CA0994;
+}
+.filter-buttons button {
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  margin: 6px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.filter-buttons button:hover {
+  background-color: #CA0994;
+  color:#fff;
+}
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  display: none; /* Initially hidden */
+  animation: fadeIn 0.5s ease-in-out; /* Fade-in animation */
+}
+.portfolio-item img {
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+.portfolio-item img:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Portfolio Section Title */
+.portfoliocss {
+  color: #CA0994;
+  font-family: Playfair Display;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 20px;
+  margin-top: 25px;
+  font-size: 3.5rem; /* Adjust font size */
+  font-weight: bold;
+}
+
+/* Filter buttons styles */
+.filter-buttons {
+  margin: 10px;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 3rem;
+  font-family: Playfair Display;
+  flex-wrap: wrap;
+  gap: 10px; /* Added gap for spacing between buttons */
+}
+
+.filter-buttons button {
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  margin: 6px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem; /* Adjust font size */
+}
+
+.filter-buttons button:hover {
+  background-color: #CA0994;
+  color:#fff !important;
+}
+
+.filter-buttons .active {
+  color: #CA0994;
+}
+
+/* Portfolio Grid */
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  margin: 20px;
+  font-family: Playfair Display;
+  padding: 0 10px; /* Added padding to prevent overflow */
+}
+
+/* Portfolio Item Styling */
+.portfolio-item {
+  display: block;
+  width: 25%;
+  height: auto; /* Removed fixed height for responsive scaling */
+  overflow: hidden;
+  border: 1px solid #CA0994;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures images scale without distortion */
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item img:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Hover Zoom Effect */
+.portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Mobile & Tablet Media Queries */
+@media (max-width: 1024px) {
+  /* Portfolio Grid - Tablets */
+  .portfolio-item {
+    width: 48%; /* Two items per row */
+  }
+
+  .portfoliocss {
+    font-size: 2.5rem; /* Adjust font size */
+  }
+
+  /* Filter buttons on tablets */
+  .filter-buttons button {
+    font-size: 1rem; /* Adjust font size */
+    padding: 8px 12px; /* Smaller buttons */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Portfolio Grid - Tablets and Smaller Screens */
+  .portfolio-item {
+    width: 100%; /* Full width for mobile */
+    height: auto;
+  }
+
+  .portfoliocss {
+    font-size: 2rem; /* Adjust font size */
+  }
+
+  .filter-buttons {
+    flex-direction: column; /* Stack buttons vertically on mobile */
+    align-items: center;
+    gap: 5px;
+  }
+
+  /* Filter buttons on mobile */
+  .filter-buttons button {
+    width: 100%; /* Full width on mobile */
+    font-size: 1rem; /* Adjust font size */
+    padding: 12px 0; /* Full-width button padding */
+  }
+}
+/* For even smaller screens (below 480px) */
+@media (max-width: 480px) {
+  .portfoliocss {
+    font-size: 1.5rem; /* Adjust font size */
+  }
+
+  .filter-buttons button {
+    font-size: 0.9rem; /* Smaller font size */
+    padding: 10px 15px; /* Adjust padding */
+  }
+
+  /* Portfolio grid on small screens */
+  .portfolio {
+    gap: 13px; /* Reduced gap */
+  }
+}

@@ -1,0 +1,96 @@
+/* General Styling */
+.photo-editing {
+  background-color: #EFEFEF;
+  padding: 60px 15px;
+}
+
+.section-title {
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+  color: #CA0994;
+  text-shadow: none;
+  font-weight: 700;
+}
+
+/* Card Styling */
+.custom-card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.custom-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.custom-card img:hover {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 20px;
+  background-color: white;
+}
+
+.card-title {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #CA0994;
+  margin: 0;
+}
+.card-title:hover {
+  background-color: #CA0994;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .custom-card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .card-title {
+    font-size: 0.9rem;
+  }
+
+  .custom-card img {
+    height: 400px; /* Limit height for smaller screens */
+  }
+}

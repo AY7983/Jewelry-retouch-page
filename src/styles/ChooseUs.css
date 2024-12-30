@@ -1,0 +1,148 @@
+/* General Section Styling */
+#servicess {
+  background-color: #f9f9f9; /* Light background for contrast */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.6)
+  ),
+  url('../../public/images/choose.png');
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  font-family: "Cormorant Garamond", serif;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+  position: relative; /* Ensure the container is positioned for layering */
+}
+
+/* Title Styling */
+#servicess h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.5px; /* Slightly adjusted spacing for readability */
+  line-height: 1.2;
+}
+
+/* Section Paragraph Styling */
+.container-choose p {
+  color: #ffffff;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  line-height: 1.6; /* Improve readability */
+  max-width: 800px; /* Limit width to maintain text structure */
+  margin-left: auto;
+  margin-right: auto; /* Center text */
+}
+
+/* Card Container Styling */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+  align-items: flex-start; /* Ensures cards are aligned at the top */
+}
+
+/* Individual Cards */
+.cardss {
+  background: rgba(255, 255, 255, 0.9); /* Slight transparency for a modern look */
+  border-radius: 18px;
+  border-top: 5px solid #CA0994;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 300px;
+  height: 350px; /* Slightly taller cards for balanced proportions */
+  margin: 34px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover Effects for Cards */
+.cardss:hover {
+  transform: translateY(-10px) scale(1.02); /* Slight scaling effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Content Styling */
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Card Title Styling */
+.card-content h1 {
+  font-size: 1.6rem;
+  color: #CA0994;
+  margin-bottom: 15px;
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  text-transform: capitalize; /* Improve readability */
+}
+
+/* Card Description Styling */
+.card-content p {
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  color: #000000;
+  line-height: 1.6;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-left: 5px;
+  padding-right: 5px; /* Add padding for better text spacing */
+}
+
+/* Responsive Design for Medium Screens */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #servicess h2 {
+    font-size: 2rem;
+  }
+
+  .container-choose p {
+    font-size: 1rem;
+  }
+
+  .cardss {
+    width: 90%; /* Adjust width for smaller screens */
+    height: auto; /* Allow dynamic height */
+  }
+
+  .card-content h1 {
+    font-size: 1.4rem;
+  }
+
+  .card-content p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 576px) {
+  #servicess h2 {
+    font-size: 1.8rem;
+  }
+
+  .card-content h1 {
+    font-size: 1.2rem;
+  }
+
+  .card-content p {
+    font-size: 0.9rem;
+  }
+}

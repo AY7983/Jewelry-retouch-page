@@ -1,0 +1,233 @@
+/* Global Variables */
+:root {
+  --light-gray: #f5f5f5;
+  --dark-gray: #333;
+  --text-dark: #333;
+  --text-light: #555;
+  --border-color: #ccc;
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Raleway", sans-serif;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: var(--light-gray);
+  padding: 30px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.footer-column {
+  flex: 1 1 250px;
+  margin-top: 20px;
+  text-align: center;
+  font-family: var(--font-sans);
+  padding: 20px;
+  background-color: var(--light-gray);
+  border-radius: 10px;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+.footer-column h3 {
+  font-size: 1.9rem;
+  font-family: var(--font-serif);
+  color: #CA0994;
+  margin-bottom: 15px;
+}
+
+
+.footer-column p,
+.footer-column a {
+  font-size: 1rem;
+  color: #000000;
+  text-decoration: none;
+  margin: 8px 0;
+  display: block;
+}
+
+.footer-column a:hover {
+  color: #CA0994;
+}
+
+.logo-img-foot {
+  width: 60px;
+  height: auto;
+  margin: 0 auto 10px auto;
+}
+
+/* Newsletter Section */
+.newsletter-input {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.newsletter-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.newsletter-input button {
+  background-color: #CA0994;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-input button:hover {
+  background-color: #ffff;
+  color: #CA0994
+}
+
+/* Social Media Icons */
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-icons a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img {
+  width: 32px;
+  height: 32px;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1rem;
+  font-family: var(--font-sans);
+  background-color: #CA0994;
+  color: #fff;
+}
+
+/* Contact Section */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.contact-item img {
+  width: 24px;
+  height: 24px;
+}
+
+.contact-item p {
+  font-size: 1rem;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--main-purple);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+  background-color: var(--hover-purple);
+  transform: scale(1.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .footer-container {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  .footer-column {
+    min-width: 300px;
+  }
+
+  .newsletter-input input {
+    padding: 8px;
+  }
+
+  .newsletter-input button {
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .newsletter-input {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .newsletter-input input,
+  .newsletter-input button {
+    width: 100%;
+    border-radius: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-column h3 {
+    font-size: 1.2rem;
+  }
+
+  .footer-column p,
+  .footer-column a {
+    font-size: 0.9rem;
+  }
+
+  .newsletter-input input {
+    font-size: 0.9rem;
+  }
+
+  .newsletter-input button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}

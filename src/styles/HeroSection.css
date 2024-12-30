@@ -1,0 +1,170 @@
+/* Hero Section Styling */
+.heroSection {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the content */
+  padding: 4rem 2rem; /* Reduce padding for a tighter layout */
+  background-color: #1a1a2e;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+}
+
+/* Text Content Styling */
+.textContent {
+  flex: 1;
+  max-width: 50%; /* Adjust width to be less wide */
+  text-align: left; /* Align text to the left */
+  color: #fff;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the text */
+  padding-right: 2rem; /* Add some space between text and image */
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-family: Playfair Display;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  font-family: Raleway;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+  max-width: 100%;
+}
+
+/* Button Container */
+.btnContainer {
+  display: flex;
+  justify-content: center; /* Keep the button centered horizontally */
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  width: 80%; /* Ensure it's full width for the centering */
+}
+
+.exploreButton .button{
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ffffff;
+  color: #CA0994 !important; /* Updated color */
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #CA0994; /* Add a border for a clean look */
+  color: #ffffff;
+  font-size: 1rem;
+  border-radius: 25px; /* Rounded button */
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: 700; /* Make the text bold for better readability */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transition: all 0.3s ease; /* Smooth transition effect */
+}
+
+.exploreButton button:hover {
+  background-color: #CA0994; /* Change background to the button color */
+  color: #ffffff !important; /* Text color switches to white */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance the shadow on hover */
+  transform: translateY(-2px); /* Slight upward movement */
+}
+
+
+/* Image Content Styling */
+.imageContent {
+  flex: 1;
+  max-width: 40%; /* Reduce the width of the image */
+  position: relative;
+  z-index: 2;
+  margin-top: 2rem; /* Space out the image on top */
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  position: relative;
+  filter: brightness(70%);
+  transition: filter 0.3s ease;
+}
+
+.image:hover {
+  filter: brightness(50%);
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+  mix-blend-mode: darken;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroSection {
+    flex-direction: column;
+    height: auto;
+    padding: 4rem 1rem;
+  }
+
+  .textContent {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .heroTitle {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .imageContent {
+    max-width: 60%;
+    margin-top: 1rem; /* Less margin on small screens */
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+
+  .exploreButton {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+
+  .imageContent {
+    max-width: 80%;
+    margin-top: 1rem;
+  }
+}

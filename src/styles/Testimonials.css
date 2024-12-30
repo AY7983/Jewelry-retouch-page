@@ -1,0 +1,111 @@
+.testimonials {
+  text-align: center;
+  padding: 40px;
+  background-color: #F5F5F5;
+}
+
+.testimonials h1 {
+  color: #CA0994;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: Playfair Display;
+  margin-bottom: 20px;
+}
+
+.testimonial-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.testimonial-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.testimonial-card {
+  text-align: center;
+  max-width: 600px;
+}
+
+.testimonial-card h2 {
+  color: #333;
+}
+
+.testimonial-card p {
+  color: #CA0994;
+}
+
+.testimonial-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 2px solid #CA0994;
+}
+
+.stars {
+  color: #ffc107;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Navigation Arrows Positioned Outside */
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #CA0994;
+  z-index: 10;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-arrow:hover {
+  color: #000000;
+}
+
+.left-arrow {
+  left: -50px; /* Position arrow outside the container */
+}
+
+.right-arrow {
+  right: -50px; /* Position arrow outside the container */
+}
+
+/* Dots for Navigation */
+.dots {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  border-radius: 50%;
+  background: #CA0994;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background: #FFFFFF;
+  border: 2px solid #CA0994;
+}

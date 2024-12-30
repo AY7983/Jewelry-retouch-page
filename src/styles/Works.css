@@ -1,0 +1,122 @@
+.how-it-works {
+  background: linear-gradient(to bottom, #CA0994 50%, #000000 50%);
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* Title Styling */
+.how-it-works h1 {
+  font-size: 3.5rem;
+  color:#ffff;
+  text-shadow: 2px 2px 4px #ffff; /* A darker indigo-purple shade */
+  margin-bottom: 40px;
+}
+
+/* Steps Container */
+.steps-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+/* Step Card */
+.step-card {
+  background-color: #fff;
+  color: #000000;
+  border-radius: 10px;
+  width: 300px;
+  height: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Step Number Circle */
+.step-number {
+  background-color: #f7f7f7;
+  color: #CA0994;
+  border: 2px solid #CA0994;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Step Card Headings */
+.step-card h2 {
+  margin-top: 20%;
+  font-size: 1.25rem;
+}
+
+/* Step Card Paragraph */
+.step-card p {
+  color: #000000;
+  font-size: 1rem;
+  line-height: 1.4;
+  display: flex;
+  margin: 10px 15px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+
+/* CTA Button */
+.cta-button button {
+  background-color: #CA0994;
+  color: #fff;
+  border: none;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button button:hover {
+  background-color: #ffff;
+  color:#CA0994;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .steps-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step-card {
+    width: 90%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .how-it-works h1 {
+    font-size: 2rem;
+  }
+
+  .step-card h2 {
+    font-size: 1.1rem;
+  }
+
+  .step-card p {
+    font-size: 0.9rem;
+  }
+}
