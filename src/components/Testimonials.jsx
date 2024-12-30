@@ -8,7 +8,7 @@ const Testimonials = () => {
   const testimonials = [
     {
       name: 'Sarah Mitchell',
-      image: '../../public/images/testimonial2.jpg',
+      image: './images/testimonial2.jpg',
       stars: '★★★★★',
       feedback: `I am beyond impressed with the quality of work! My jewelry images went from ordinary to extraordinary. 
         The attention to detail and precision in retouching is exceptional. The team was professional, 
@@ -16,7 +16,7 @@ const Testimonials = () => {
     },
     {
       name: 'Daniel Carter',
-      image: '../../public/images/testimonial3.jpg',
+      image: './images/testimonial3.jpg',
       stars: '★★★★★',
       feedback: `Absolutely fantastic service! The retouching brought out the perfect sparkle and elegance in 
         my product photos. The images look so polished and professional now. This has made a big 
@@ -24,14 +24,14 @@ const Testimonials = () => {
     },
     {
       name: 'Emily Davis',
-      image: '../../public/images/Testimonial.jpg',
+      image: './images/Testimonial.jpg',
       stars: '★★★★★',
       feedback: `The team exceeded my expectations with their retouching work. The images now have a flawless finish, 
         and the colors pop beautifully. This has greatly improved my online store's presentation!`
     },
     {
       name: 'Michael Johnson',
-      image: '../../public/images/testimonial4.jpg',
+      image: './images/testimonial4.jpg',
       stars: '★★★★★',
       feedback: `Impeccable work! The retouching was so precise and natural that my product photos look stunning. 
         I couldn't be happier with the results. Highly recommend their services!`

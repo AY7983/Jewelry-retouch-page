@@ -8,19 +8,19 @@ const blogs = [
     title: "Expert Necklace Photo Retouching: Enhance the Beauty of Your Jewelry",
     description: "Necklace Photo Retouching: Transform Your Jewelry Photos into Stunning Works of Art",
     category: "jewelry-editing",
-    image: "../../public/images/b-2.webp", // Replace with actual image path
+    image: "./images/b-2.webp", // Replace with actual image path
   },
   {
     title: "Professional Bangle Photo Retouching: Perfect Your Jewelry Photography",
     description: "Transform your bangle images with expert retouching, shine, and color to create captivating, high-quality jewelry photos",
     category: "photo-editing",
-    image: "../../public/images/h-1.webp", // Replace with actual image path
+    image: "./images/h-1.webp", // Replace with actual image path
   },
   {
     title: "Expert Ring Photo Retouching: Perfect Your Jewelry Shots nicely",
     description: "Enhance your ring images with professional retouching, improving details, sparkle, and colors for flawless, high-quality jewelry photos",
     category: "jewelry-editing",
-    image: "../../public/images/b-3.webp", // Replace with actual image path
+    image: "./images/b-3.webp", // Replace with actual image path
   },
 ];
 

@@ -116,7 +116,7 @@ const Services = () => {
                 <Card className="service-item shadow-sm">
                   <Card.Img
                     variant="top"
-                    src={`../../public/images/S-${index + 1}.png`}
+                    src={`./images/S-${index + 1}.png`}
                     alt={service}
                     className="img-fluid mb-2"
                   />

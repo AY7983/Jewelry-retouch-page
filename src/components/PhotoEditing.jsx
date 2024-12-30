@@ -63,7 +63,7 @@ const PhotoEditing = () => {
             >
               <div className="card custom-card shadow-sm">
                 <img
-                  src={`../../public/images/ph-${index + 1}.webp`}
+                  src={`./images/ph-${index + 1}.webp`}
                   className="card-img-top"
                   alt={title}
                 />

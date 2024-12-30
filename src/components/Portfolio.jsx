@@ -107,7 +107,7 @@ const Portfolio = () => {
               transition={{ duration: 0.6 }}
             >
               <img
-                src={`../../public/images/${image}`}
+                src={`../images/${image}`}
                 alt={`${category.replace("-", " ")} ${index + 1}`}
               />
             </motion.div>
