@@ -21,7 +21,7 @@
   z-index: 3;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Vertically center the text */
+  /* justify-content: center; Vertically center the text */
   padding-right: 2rem; /* Add some space between text and image */
 }
 

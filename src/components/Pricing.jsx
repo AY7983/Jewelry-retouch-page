@@ -1,74 +1,65 @@
 import React from "react";
-import { motion } from "framer-motion";  // Import Framer Motion
 import "../styles/Pricing.css";
 
-const Pricing = () => {
+const PricingPlans = () => {
+  const plans = [
+    {
+      name: "Premium",
+      price: "$60/month",
+      description: "Perfect for individuals starting out.",
+      features: ["Standard image retouching", "Color correction", "Limited revisions"],
+      button: "Get Started With Basic",
+    },
+    {
+      name: "Pro",
+      price: "$290/month",
+      description: "Ideal for professionals and small teams.",
+      features: [
+        "Everything in Basic",
+        "Advanced corrections",
+        "Fixing specifics",
+        "Generate clarity",
+        "Moderate revisions",
+      ],
+      button: "Get Started With Pro",
+      isPopular: true,
+    },
+    {
+      name: "Premium",
+      price: "$480/month",
+      description: "Best for large organizations and enterprises.",
+      features: [
+        "Everything in Pro",
+        "Custom edits",
+        "Remove elements",
+        "Fix sharpness",
+        "Unlimited revisions",
+      ],
+      button: "Get Started With Premium",
+    },
+  ];
+
   return (
-    <motion.section
-      id="pricing"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      viewport={{ once: true, amount: 0.3 }} // Animation when 30% of the section is visible
-    >
-      <div className="pricing-container">
-        <motion.h1
-          className="pricing-header"
-          initial={{ y: -20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          Get the Best Price
-        </motion.h1>
-        <div className="pricing-plans">
-          {/* Basic Plan */}
-          <motion.div
-            className="pricing-plan"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <h2 className="plan-title">Basic</h2>
-            <div className="pricing-color">
-              <p className="plan-price">$9/month</p>
-              <p className="plan-details">Perfect for individuals starting out let's start.</p>
-            </div>
-            <a href="#" className="plan-action">Choose Basic</a>
-          </motion.div>
-
-          {/* Pro Plan */}
-          <motion.div
-            className="pricing-plan"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            <h2 className="plan-title">Pro</h2>
-            <div className="pricing-color">
-              <p className="plan-price">$29/month</p>
-              <p className="plan-details">Ideal for professionals and small teams experience.</p>
-            </div>
-            <a href="#" className="plan-action">Choose Pro</a>
-          </motion.div>
-
-          {/* Premium Plan */}
-          <motion.div
-            className="pricing-plan"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-          >
-            <h2 className="plan-title">Premium</h2>
-            <div className="pricing-color">
-              <p className="plan-price">$49/month</p>
-              <p className="plan-details">Best for large organizations and enterprises.</p>
-            </div>
-            <a href="#" className="plan-action">Choose Premium</a>
-          </motion.div>
-        </div>
+    <section className="pricing-plans">
+      <h2 className="section-title">Affordable Pricing Plans</h2>
+      <div className="plans-container">
+        {plans.map((plan, index) => (
+          <div className={`plan-card ${plan.isPopular ? "popular" : ""}`} key={index}>
+            {plan.isPopular && <span className="badge">Most Popular</span>}
+            <h3 className="plan-name">{plan.name}</h3>
+            <p className="plan-price">{plan.price}</p>
+            <p className="plan-description">{plan.description}</p>
+            <ul className="plan-features">
+              {plan.features.map((feature, i) => (
+                <li key={i}>{feature}</li>
+              ))}
+            </ul>
+            <button className="plan-button">{plan.button}</button>
+          </div>
+        ))}
       </div>
-    </motion.section>
+    </section>
   );
 };
 
-export default Pricing;
+export default PricingPlans;

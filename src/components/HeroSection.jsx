@@ -21,6 +21,7 @@ const HeroSection = () => {
 
   return (
     <motion.section
+      id = "home"
       className="heroSection"
       initial="hidden"
       whileInView="visible"

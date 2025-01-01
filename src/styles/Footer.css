@@ -1,62 +1,52 @@
-/* Global Variables */
-:root {
-  --light-gray: #f5f5f5;
-  --dark-gray: #333;
-  --text-dark: #333;
-  --text-light: #555;
-  --border-color: #ccc;
-  --font-serif: "Playfair Display", serif;
-  --font-sans: "Raleway", sans-serif;
-}
-
 /* Footer Styling */
 .footer {
   background-color: var(--light-gray);
-  padding: 30px 20px;
+  padding: 40px 20px;
+  text-align: center;
 }
 
 .footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
-  gap: 30px;
 }
 
 .footer-column {
-  flex: 1 1 250px;
-  margin-top: 20px;
-  text-align: center;
-  font-family: var(--font-sans);
   padding: 20px;
+  font-family: var(--font-sans);
   background-color: var(--light-gray);
   border-radius: 10px;
-  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .footer-column h3 {
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   font-family: var(--font-serif);
   color: #CA0994;
   margin-bottom: 15px;
+  text-align: center;
 }
-
 
 .footer-column p,
 .footer-column a {
   font-size: 1rem;
   color: #000000;
   text-decoration: none;
-  margin: 8px 0;
+  margin: 10px 0;
   display: block;
+  text-align: center;
 }
 
 .footer-column a:hover {
   color: #CA0994;
 }
 
+/* Align logo in the center */
 .logo-img-foot {
+  display: block;
   width: 60px;
   height: auto;
   margin: 0 auto 10px auto;
@@ -66,12 +56,14 @@
 .newsletter-input {
   display: flex;
   gap: 10px;
-  justify-content: center;
   margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .newsletter-input input {
-  flex: 1;
+  flex: 1 1 200px;
   padding: 10px;
   border: 1px solid var(--border-color);
   border-radius: 4px;
@@ -93,7 +85,7 @@
 
 .newsletter-input button:hover {
   background-color: #ffff;
-  color: #CA0994
+  color: #CA0994;
 }
 
 /* Social Media Icons */
@@ -101,7 +93,7 @@
   margin-top: 15px;
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 15px;
 }
 
 .social-icons a {
@@ -121,12 +113,9 @@
 /* Footer Bottom */
 .footer-bottom {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 30px;
   border-top: 1px solid var(--border-color);
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-size: 1rem;
-  font-family: var(--font-sans);
+  padding: 10px;
   background-color: #CA0994;
   color: #fff;
 }
@@ -137,6 +126,7 @@
   align-items: center;
   gap: 10px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .contact-item img {
@@ -150,71 +140,39 @@
   margin: 0;
 }
 
-/* Scroll to Top Button */
-#scrollTopBtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: var(--main-purple);
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  font-size: 1.5rem;
-  padding: 10px 15px;
-  cursor: pointer;
-  display: none;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-}
-
-#scrollTopBtn:hover {
-  background-color: var(--hover-purple);
-  transform: scale(1.1);
-}
-
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
   .footer-container {
-    flex-wrap: wrap;
-    justify-content: space-around;
-    text-align: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
   }
 
   .footer-column {
-    min-width: 300px;
-  }
-
-  .newsletter-input input {
-    padding: 8px;
-  }
-
-  .newsletter-input button {
-    padding: 8px 10px;
+    text-align: center;
   }
 }
 
 @media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
   .newsletter-input {
     flex-direction: column;
-    width: 100%;
+    align-items: stretch;
+    gap: 10px;
   }
 
   .newsletter-input input,
   .newsletter-input button {
     width: 100%;
-    border-radius: 4px;
+  }
+
+  .footer-column p,
+  .footer-column a {
+    font-size: 0.95rem;
   }
 }
 
 @media (max-width: 480px) {
   .footer-column h3 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   .footer-column p,

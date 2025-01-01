@@ -1,81 +1,134 @@
-/* pricing styling */
-.pricing-container {
-  text-align: center;
-  padding: 50px 20px;
-  background-color: #F5F5F5;
-}
-
-.pricing-header {
-  font-family: Playfair Display;
-  font-size: 3.5rem;
-  font-weight: bold;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  padding: 10px 10px;
-  margin-bottom: 30px;
-  color: #CA0994;
-}
-
+/* Overall Section Styles */
 .pricing-plans {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  flex-wrap: wrap;
+  background-color: #000; /* Dark background */
+  color: #fff;
+  padding: 4rem 1.5rem;
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
 
-.pricing-plan {
-  background: #fff;
-  border: 2px solid #CA0994;
-  border-radius: 10px;
-  padding: 20px;
-  width: 300px;
-  height: 300px;
-  margin: 10px 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 3rem;
+}
+
+/* Card Container */
+.plans-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Individual Card */
+.plan-card {
+  background: rgba(255, 255, 255, 0.05); /* Slight transparency */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 350px;
+  flex: 1 1 calc(33.333% - 2rem);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.pricing-plan:hover {
+.plan-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
 }
 
-.plan-title {
-  font-family:Raleway;
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  color: #000000;
+.popular {
+  background: linear-gradient(145deg, #ffd700, #ffec80); /* Highlighted gradient */
+  color: #000;
+}
+
+.badge {
+  position: absolute;
+  top: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffd700;
+  color: #000;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Content */
+.plan-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
 .plan-price {
-  font-family: Raleway;
-  font-size: 2em;
-  margin: 15px 0;
-  color: white;
-}
-.pricing-color{
-  background-color: #CA0994;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #ddd;
 }
 
-.plan-details {
-  font-family: Raleway;
-  font-size: 1em;
-  margin-bottom: 20px;
-  color:white;
+.plan-description {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #ccc;
 }
 
-.plan-action {
-  font-family: Raleway;
-  display: block;
-  text-decoration: none;
-  background-color: #CA0994;
-  color: #fff;
-  padding: 10px 15px;
-  border-radius: 5px;
-  font-size: 1em;
-  transition: background-color 0.3s;
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+  width: 100%;
 }
 
-.plan-action:hover {
-  background-color: #FFFFFF;
-  color:#CA0994;
+.plan-features li {
+  margin-bottom: 0.75rem;
+  color: #bbb;
+  display: flex;
+  align-items: center;
+}
+
+.plan-features li::before {
+  content: "✔";
+  color: #ffd700;
+  margin-right: 0.5rem;
+}
+
+/* Button */
+.plan-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #ffd700;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.plan-button:hover {
+  background-color: #ffcc00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .plans-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .plan-card {
+    flex: 1 1 100%;
+  }
 }
