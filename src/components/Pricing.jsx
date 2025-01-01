@@ -41,7 +41,7 @@ const PricingPlans = () => {
 
   return (
     <section className="pricing-plans">
-      <h2 className="section-title">Affordable Pricing Plans</h2>
+      <h2 className="section-titles">Affordable Pricing Plans</h2>
       <div className="plans-container">
         {plans.map((plan, index) => (
           <div className={`plan-card ${plan.isPopular ? "popular" : ""}`} key={index}>
