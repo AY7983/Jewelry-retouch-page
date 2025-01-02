@@ -1,7 +1,7 @@
 /* FAQ.css */
 .faq-container {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 4rem auto;
   padding: 20px;
   font-family: Arial, sans-serif;
 }
@@ -9,6 +9,7 @@
 .faq-title {
   text-align: center;
   color: #CA0994;
+  margin-top: 15px;
   margin-bottom: 20px;
   font-size: 3rem;
   font-weight: bold;
@@ -22,6 +23,7 @@
 
 .faq-item {
   border-bottom: 1px solid #ddd;
+  margin:1.5rem;
 }
 
 .faq-item:last-child {

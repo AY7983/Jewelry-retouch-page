@@ -24,7 +24,11 @@ const GetInTouch = () => {
   };
 
   const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-
+  const validateName = (name) => {
+    // Ensure the name doesn't contain special characters and is not longer than 255 characters
+    const nameRegex = /^[A-Za-z\s]+$/; // Only alphabet characters and spaces allowed
+    return nameRegex.test(name) && name.length <= 255;
+  };
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -40,6 +44,9 @@ const GetInTouch = () => {
     }
     if (!validateEmail(formData.email)) {
       newErrors.email = 'Please enter a valid email address.';
+    }
+    if (!validateName(formData.fullname)) {
+      newErrors.fullname = 'Full name must not contain special characters and should not exceed 255 characters.';
     }
     if (!formData.fullname.trim()) {
       newErrors.fullname = 'Full name is required.';

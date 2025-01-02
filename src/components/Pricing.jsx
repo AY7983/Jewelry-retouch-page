@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "../styles/Pricing.css";
 
 const PricingPlans = () => {
@@ -40,11 +41,32 @@ const PricingPlans = () => {
   ];
 
   return (
-    <section className="pricing-plans">
-      <h2 className="section-titles">Affordable Pricing Plans</h2>
+    <motion.section
+      id="pricing"
+      className="pricing-plans"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
+      <motion.h2
+        className="section-titles"
+        initial={{ y: -50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        Affordable Pricing Plans
+      </motion.h2>
       <div className="plans-container">
         {plans.map((plan, index) => (
-          <div className={`plan-card ${plan.isPopular ? "popular" : ""}`} key={index}>
+          <motion.div
+            className={`plan-card ${plan.isPopular ? "popular" : ""}`}
+            key={index}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.2 }} // Staggered animation delay for each plan card
+            viewport={{ once: true, amount: 0.3 }} // Trigger animation when 30% of the element is in view
+          >
             {plan.isPopular && <span className="badge">Most Popular</span>}
             <h3 className="plan-name">{plan.name}</h3>
             <p className="plan-price">{plan.price}</p>
@@ -54,11 +76,17 @@ const PricingPlans = () => {
                 <li key={i}>{feature}</li>
               ))}
             </ul>
-            <button className="plan-button">{plan.button}</button>
-          </div>
+            <motion.button
+              className="plan-button"
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              {plan.button}
+            </motion.button>
+          </motion.div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

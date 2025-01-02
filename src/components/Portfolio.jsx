@@ -75,7 +75,12 @@ const Portfolio = () => {
   };
 
   return (
-    <section id="portfolio">
+    <motion.section
+      id="portfolio"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <h1 className="portfoliocss">Portfolio</h1>
 
       {/* Filter Buttons */}
@@ -114,7 +119,7 @@ const Portfolio = () => {
           ))
         )}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

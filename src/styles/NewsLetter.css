@@ -11,7 +11,7 @@
 .newsletter-input form {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
   justify-content: center;
   align-items: center;
   max-width: 500px;
@@ -34,7 +34,7 @@
 
 .newsletter-input button {
   padding: 12px 20px;
-  background-color: #CA0994;
+  background-color: #000000;
   color: #ffffff;
   border: none;
   border-radius: 8px;
@@ -48,7 +48,7 @@
 
 .newsletter-input button:hover:not(:disabled) {
   background-color: #ffffff;
-  color: #CA0994;
+  color: #000000;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
 }
@@ -59,7 +59,7 @@
 }
 
 .error-message {
-  color: red;
+  color: red !important;
   font-size: 0.875rem;
   margin-top: 5px;
   text-align: center;
@@ -69,11 +69,42 @@
 @media (max-width: 768px) {
   .newsletter-input form {
     flex-direction: column;
+    gap: 35px; /* Increased gap between the input field and button for better spacing */
+    padding: 0 20px; /* Add horizontal padding for better spacing on small screens */
   }
 
   .newsletter-input input,
   .newsletter-input button {
     width: 100%;
     border-radius: 4px;
+    padding: 14px; /* Increased padding for easier touch interaction */
+    font-size: 1.1rem; /* Slightly larger text for readability */
+  }
+
+  .newsletter-input button {
+    font-size: 1rem; /* Adjust button size for small screens */
+    padding: 14px 20px;
+  }
+
+  .error-message {
+    font-size: 0.9rem;
+  }
+}
+
+/* For Very Small Screens (Phones in Portrait Mode) */
+@media (max-width: 480px) {
+  .newsletter-input input,
+  .newsletter-input button {
+    padding: 14px; /* More padding to ensure usability */
+    font-size: 1rem; /* Maintain a legible font size */
+  }
+
+  .newsletter-input form {
+    gap: 30px; /* Increase the gap for more breathing space */
+    padding: 0 15px; /* Add small padding for very small screens */
+  }
+
+  .error-message {
+    font-size: 0.85rem; /* Reduce font size slightly for smaller screens */
   }
 }

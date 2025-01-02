@@ -1,18 +1,23 @@
 .hero-section {
   text-align: center;
-  /* padding: 2rem; */
   padding-left: 5rem;
   background-color: #f8f8f8;
   font-family: Arial, sans-serif;
+  margin-top: 5%;
+  padding-right: 5rem;
 }
 
+/* Hero Title */
 .hero-title {
   font-size: 3rem;
   font-weight: bold;
-  margin: 25px;
+  font-family: Playfair display;
+  color: #D5B46F;
+  margin: 40px;
   text-align: center;
 }
 
+/* Hero Content */
 .hero-content {
   z-index: 0;
   position: relative;
@@ -20,54 +25,65 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 1rem;
-  max-width: 90%;
+  max-width: 99%;
   position: relative;
+  /* justify-content: center; */
 }
 
+/* Hero Content Background */
 .hero-content::before {
   content: "";
   position: absolute;
   top: 0;
   right: 0;
-  width: 60%; /* Covers half the content */
+  width: 60%;
   height: 100%;
-  background-color: #D5B46F; /* Yellow color for the right side */
-  z-index: -1; /* Places it behind the content */
+  background-color: #D5B46F;
+  z-index: -1;
 }
 
+/* Hero Image */
 .hero-image {
   width: 100%;
   max-width: 650px;
   height: auto;
   border-radius: 8px;
+  margin: 0 auto;
 }
 
+/* Hero Text Box */
 .hero-text-box {
   background-color: #fff;
   position: absolute;
   left: 42%;
   top: 20%;
   padding: 1.5rem;
-  max-width: 550px;
-  height: 400px;
+  max-width: 650px;
+  height: 450px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 0px 20px #000000;
+  text-align: center;
 }
 
+/* Hero Description */
 .hero-description {
-  margin-top: 25px;
-  font-size: 1.2rem;
-  line-height: 1.5;
-  color: #333;
+  margin-top: 55px;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #000000;
   margin-bottom: 1rem;
+  font-family: Raleway;
 }
 
+/* Hero Button */
 .hero-button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  font-family: Raleway;
+  font-weight: 500;
   color: #fff;
-  background-color: #333;
+  background-color: #000000;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -86,33 +102,115 @@
 }
 
 .step-button {
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
-  color: #333;
+  padding: 0.5rem 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+  font-size: 1.2rem;
+  font-family: Raleway;
+  color: #000000;
   background-color: #fff;
   border: 2px solid #ddd;
-  border-radius: 4px;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .step-button:hover {
   background-color: #f0f0f0;
-  border-color: #333;
+  border-color: #000000;
 }
 
-/* Responsive Design */
+/* Responsive Design for Mobile */
 @media (max-width: 768px) {
+  .hero-section {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    margin: 20px 0;
+  }
+
   .hero-content {
     flex-direction: column;
+    align-items: center;
+    gap: 2rem; /* Space between items */
   }
 
   .hero-text-box {
-    max-width: 100%;
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    max-width: 99%;
+    height: auto;
+    box-shadow: inset 0px 0px 15px #000000;
+    padding: 1rem;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+    margin-top: 20px;
+  }
+
+  .hero-button {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+  }
+
+  .steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step-button {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    padding: 0.8rem 2rem;
   }
 
   .hero-content::before {
-    width: 100%; /* Ensures the yellow background adapts on smaller screens */
-    height: 50%; /* Applies only to the bottom half */
+    width: 100%;
+    height: 50%;
+  }
+}
+
+/* Further Adjustments for Very Small Screens */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+    margin: 15px 0;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+  }
+
+  .hero-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .step-button {
+    font-size: 1rem;
+    padding: 0.6rem 1.5rem;
+  }
+
+  .hero-image {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .steps {
+    gap: 1rem; /* Reduced gap between step buttons */
   }
 }

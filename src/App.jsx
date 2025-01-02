@@ -16,6 +16,7 @@ import GetInTouch from './components/GetInTouch';
 
 
 
+
 function App() {
 
   return (
@@ -26,9 +27,9 @@ function App() {
     <PhotoEditing/>
     <ChooseUs/>
     <Portfolio/>
-    <Pricing/>
-    <FrequentlyAskedQuestions/>
     <HowItWorks/>
+    <FrequentlyAskedQuestions/>
+    <Pricing/>
     <Testimonials/>
     <Blogs/>
     <GetInTouch/>

@@ -5,22 +5,22 @@
   gap: 20px;
   margin-top: 20px;
 }
-.pipe{
+
+.pipe {
   font-size: 35px;
-  margin-left:30px;
+  margin-left: 30px;
   font-weight: bold;
 }
+
 .portfolio-item {
   text-decoration: none;
   color: #333;
   padding: 10px 20px;
-  /* border: 1px solid #333; */
   border-radius: 5px;
   cursor: pointer;
 }
 
 .portfolio-item.active {
-  background-color: #333;
   color: #fff;
 }
 
@@ -51,9 +51,8 @@
   cursor: pointer;
 }
 
-
-.portfoliocss{
-  color:#CA0994;
+.portfoliocss {
+  color: #CA0994;
   font-family: Playfair Display;
   justify-content: center;
   display: flex;
@@ -61,8 +60,9 @@
   margin-top: 25px;
   font-weight: bold;
   font-size: 3.5rem !important;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);  
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
+
 .portfolio {
   display: flex;
   flex-wrap: wrap;
@@ -75,18 +75,29 @@
 .portfolio-item {
   display: block;
   width: 25%;
-  height: 50%;
+  height: auto; /* Removed fixed height for responsive scaling */
   overflow: hidden;
-  /* border: 1px solid #CA0994; */
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .portfolio-item img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: inset 0px 0px 50px #CA0994;
+  object-fit: cover; /* Ensures images scale without distortion */
+  transition: transform 0.3s ease;
 }
+
+.portfolio-item img:hover {
+  transform: scale(1.2); /* Zoom effect on hover */
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.08);
+}
+
 /* Category.css */
 .category-container {
   display: flex;
@@ -103,58 +114,38 @@
   font-size: 16px;
 }
 
-.category-item:hover {
-  background-color: #CA0994; /* Background color on hover */
-  color: #fff; /* Text color on hover */
-  border-color: #fff; /* Change border color on hover */
-}
-
-
 .hidden {
   display: none;
 }
 
-.filter-buttons {
-  margin: 10px;
-  justify-content: center;
-  display: flex;
-  margin-bottom: 3rem;
-  font-family:Playfair Display;
-}
-
-.filter-buttons .active{
-  color:#CA0994;
-}
-.filter-buttons button {
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  margin: 6px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.filter-buttons button:hover {
-  background-color: #CA0994;
-  color:#fff;
-}
 .portfolio-item {
   position: relative;
   overflow: hidden;
   display: none; /* Initially hidden */
   animation: fadeIn 0.5s ease-in-out; /* Fade-in animation */
 }
+
 .portfolio-item img {
   width: 100%;
   transition: transform 0.3s ease;
 }
+
 .portfolio-item img:hover {
   transform: scale(1.1); /* Zoom effect on hover */
 }
+
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
 /* Portfolio Section Title */
 .portfoliocss {
   color: #CA0994;
@@ -188,11 +179,6 @@
   font-size: 1rem; /* Adjust font size */
 }
 
-.filter-buttons button:hover {
-  background-color: #CA0994;
-  color:#fff !important;
-}
-
 .filter-buttons .active {
   color: #CA0994;
 }
@@ -214,26 +200,25 @@
   width: 25%;
   height: auto; /* Removed fixed height for responsive scaling */
   overflow: hidden;
-  /* border: 1px solid #CA0994; */
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
 .portfolio-item img {
   width: 100%;
   height: auto;
+  box-shadow: inset 0px 0px 50px #CA0994;
   object-fit: cover; /* Ensures images scale without distortion */
   transition: transform 0.3s ease;
 }
 
 .portfolio-item img:hover {
-  transform: scale(1.1); /* Zoom effect on hover */
+  transform: scale(1.2); /* Zoom effect on hover */
 }
 
 /* Hover Zoom Effect */
 .portfolio-item:hover img {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 /* Mobile & Tablet Media Queries */
@@ -278,6 +263,7 @@
     padding: 12px 0; /* Full-width button padding */
   }
 }
+
 /* For even smaller screens (below 480px) */
 @media (max-width: 480px) {
   .portfoliocss {

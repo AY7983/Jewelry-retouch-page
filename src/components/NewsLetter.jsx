@@ -22,7 +22,7 @@ function NewsletterSubscription() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!validateEmail(email)) {
-      setError("Please enter a valid email address.");
+      setError(alert("please enter a valid email address!!"));
       return;
     }
     setError("");
@@ -95,17 +95,16 @@ function NewsletterSubscription() {
             alt="LinkedIn"
           />
         </a>
-        <a
-          href="https://www.google.com"
+          <a href="mailto:someone@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Visit our Google"
-        >
-          <img
-            src="https://img.icons8.com/color/48/000000/google-logo.png"
-            alt="Google"
-          />
-        </a>
+          aria-label="Visit our Mail">
+            <img
+              src="https://img.icons8.com/color/48/000000/email.png"
+              alt="Email"
+            />
+          </a>
+   
         <a
           href="https://www.facebook.com"
           target="_blank"
