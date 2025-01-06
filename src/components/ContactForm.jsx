@@ -54,14 +54,14 @@ const ContactUs = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <a href="tel:+1234567890">
+            <a href="tel:+0120-4558100">
               <div className="icon-container">
                 <img src="https://img.icons8.com/ios-filled/50/FFFFFF/phone.png" alt="Phone Icon" />
               </div>
             </a>
             <div className="contact-info">
               <h3>Phone Number</h3>
-              <p>+123 456 7890</p>
+              <p>+0120-4558100</p>
             </div>
           </motion.div>
         </div>
