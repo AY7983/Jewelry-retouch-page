@@ -64,7 +64,7 @@
   border: 2px solid #CA0994; /* Add a border for a clean look */
   color: #ffffff;
   font-size: 1rem;
-  border-radius: 25px; /* Rounded button */
+  border-radius: 15px; /* Rounded button */
   text-transform: uppercase;
   font-family: "Raleway", sans-serif;
   transition: background-color 0.3s ease, transform 0.2s ease;

@@ -5,7 +5,7 @@ import "../styles/Pricing.css";
 const PricingPlans = () => {
   const plans = [
     {
-      name: "Premium",
+      name: "Basic",
       price: "$60/month",
       description: "Perfect for individuals starting out.",
       features: ["Standard image retouching", "Color correction", "Limited revisions"],
@@ -40,9 +40,15 @@ const PricingPlans = () => {
     },
   ];
 
+  const scrollToHome = () => {
+    const homeSection = document.getElementById("home");
+    if (homeSection) {
+      homeSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <motion.section
-      id="pricing"
       className="pricing-plans"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -57,15 +63,15 @@ const PricingPlans = () => {
       >
         Affordable Pricing Plans
       </motion.h2>
-      <div className="plans-container">
+      <div id="pricing" className="plans-container">
         {plans.map((plan, index) => (
           <motion.div
             className={`plan-card ${plan.isPopular ? "popular" : ""}`}
             key={index}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.2 }} // Staggered animation delay for each plan card
-            viewport={{ once: true, amount: 0.3 }} // Trigger animation when 30% of the element is in view
+            transition={{ duration: 0.6, delay: index * 0.2 }}
+            viewport={{ once: true, amount: 0.3 }}
           >
             {plan.isPopular && <span className="badge">Most Popular</span>}
             <h3 className="plan-name">{plan.name}</h3>
@@ -80,6 +86,7 @@ const PricingPlans = () => {
               className="plan-button"
               whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 300 }}
+              onClick={scrollToHome} // Scroll to the home section on click
             >
               {plan.button}
             </motion.button>
