@@ -18,7 +18,7 @@ const blogs = [
   },
   {
     title: "Expert Ring Photo Retouching: Perfect Your Jewelry Shots nicely",
-    description: "Enhance your ring images with professional retouching, improving details, sparkle, and colors for flawless, high-quality jewelry photos",
+    description: "Enhance your ring images with professional retouching, improving details, and colors for flawless, high-quality jewelry photos",
     category: "jewelry-editing",
     image: "./images/b-3.webp", // Replace with actual image path
   },

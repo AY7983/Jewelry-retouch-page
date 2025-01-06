@@ -1,7 +1,7 @@
 .hero-section {
   text-align: center;
   padding-left: 5rem;
-  background-color: #f8f8f8;
+  background-color: #f8f8f817;
   font-family: Arial, sans-serif;
   margin-top: 5%;
   padding-right: 5rem;
@@ -14,6 +14,7 @@
   font-family: Playfair display;
   color: #D5B46F;
   margin: 40px;
+  margin-top: 5%;
   text-align: center;
 }
 
@@ -36,7 +37,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 60%;
+  width:60%;
   height: 100%;
   background-color: #D5B46F;
   z-index: -1;
@@ -55,8 +56,8 @@
 .hero-text-box {
   background-color: #fff;
   position: absolute;
-  left: 42%;
-  top: 20%;
+  left: 40%;
+  top: 15%;
   padding: 1.5rem;
   max-width: 650px;
   height: 450px;
