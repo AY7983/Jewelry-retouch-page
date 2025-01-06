@@ -44,7 +44,7 @@ const Footer = () => {
                   className="icon-img phone"
                 />
               </a>
-              <p>Phone: +91 - 00000 00000 , 0120-4558100</p>
+              <p>Phone: +91 - 00000, 0120-4558100</p>
             </div>
             <div className="contact-item">
               <a href="mailto:info@myjewelryretouch.com">
